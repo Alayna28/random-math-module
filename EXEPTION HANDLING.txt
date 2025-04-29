@@ -1,0 +1,44 @@
+EXEPTION HANDLING
+
+TASK 1:
+try:
+  num = int(input("Enter a number: "))
+  print(num)
+except ValueError as ex:
+  print("Exception: ", ex)
+
+print("I am outside the try block")
+
+
+TASK2:
+
+try:
+ num1 = int(input("enter a number:"))
+ num2 = int(input("enter a number:"))
+ result = num1 / num2
+ print("Result is", result)
+ print("Result is:", result)
+
+except ZeroDivisionError:
+  print("division by zero is not allowed ")
+except ValueError:
+  print("please enter numeric value")
+except NameError as ex:
+  print("the exception is:", ex)
+
+except:
+  print("some error occured")
+finally:
+  print("i will execute no matter what happens")
+
+TAK3:
+valid = False
+while not valid:
+  try:
+    n = int(input("Enter a number: "))
+    while n%2 == 0:
+      print("bye")
+      valid = True
+
+  except ValueError:
+    print("Invalid input. Please enter a valid number.")
